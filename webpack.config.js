@@ -5,15 +5,13 @@ module.exports = (env) => {
 		
 	return {
 		mode: environment,
-		entry: './src/index.js',
+		entry: './src/containers/App.js',
 		output: {
 			path: path.resolve(__dirname, 'build'),
 			filename: 'app.' + environment + '.bundle.js'
-		}
-	},
-	
-	module: {
-		rules: [
+		},
+		module: {
+			rules: [
 			{
 				test: /\.js$/,
 				loader: "babel-loader"
@@ -31,5 +29,6 @@ module.exports = (env) => {
         		]
     		}
 		]
-	}
+	},
+}
 };
